@@ -1,8 +1,15 @@
+''' 
+Gére le serveur Flask et le traitement des calculs de la calculatrice. 
+Il reçoit les expressions, vérifie leur format et utilise operators.py pour 
+effectuer les opérations. Il communique avec index.html pour afficher les résultats.
+'''
+
 from flask import Flask, request, render_template
 from operators import add, subtract, multiply, divide
 
 app = Flask(__name__)
 
+# Associe chaque opérateur à sa fonction de calcul.
 OPS = {
     '+': add,
     '-': subtract,
@@ -11,6 +18,21 @@ OPS = {
 }
 
 def calculate(expr: str):
+    '''
+    Analyse une expression et exécute l'opératio demandée.
+
+    L'expression doit contenir deux nombres séparés par un seul opérateur arithmétique.
+
+    Args :
+        expr (str) : expression à calculer
+
+    Returns :
+        float : résultat de l'opération
+
+    Raises :
+        ValueError : Si l'expression est vide, mal formée ou contient des opérations non numériques.
+    '''
+
     if not expr or not isinstance(expr, str):
         raise ValueError("empty expression")
 
@@ -19,6 +41,7 @@ def calculate(expr: str):
     op_pos = -1
     op_char = None
 
+    # Repère l'opérateur et rejette les expressions qui en contiennent plusieurs.
     for i, ch in enumerate(s):
         if ch in OPS:
             if op_pos != -1:
@@ -43,6 +66,23 @@ def calculate(expr: str):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    '''
+    Affiche la calculatrice et traite les calculs soumis.
+
+    Une requête GET affiche la page, tandis qu'une requête POST récupère l'expression et la calcule.
+
+    Args :
+        Aucun paramètre direct puisque les données sont récupérées depuis la requête FLask.
+    
+    Returns : 
+        str : Page HTML avec le résultat du calcul ou un message d'erreur.
+
+
+    
+    
+    
+    
+    '''
     result = ""
     if request.method == 'POST':
         expression = request.form.get('display', '')
