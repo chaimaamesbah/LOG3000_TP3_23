@@ -1,5 +1,5 @@
 ''' 
-Fontions responsables des opérations arithmétiques de la calculatrice. 
+Fonctions responsables des opérations arithmétiques de la calculatrice. 
 Il est utilisé par app.py pour les calculs. Il ne dépend d'aucune bibliothèque externe.
 '''
 

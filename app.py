@@ -1,5 +1,5 @@
 ''' 
-Gére le serveur Flask et le traitement des calculs de la calculatrice. 
+Gère le serveur Flask et le traitement des calculs de la calculatrice. 
 Il reçoit les expressions, vérifie leur format et utilise operators.py pour 
 effectuer les opérations. Il communique avec index.html pour afficher les résultats.
 '''
@@ -19,7 +19,7 @@ OPS = {
 
 def calculate(expr: str):
     '''
-    Analyse une expression et exécute l'opératio demandée.
+    Analyse une expression et exécute l'opération demandée.
 
     L'expression doit contenir deux nombres séparés par un seul opérateur arithmétique.
 
@@ -30,7 +30,7 @@ def calculate(expr: str):
         float : résultat de l'opération
 
     Raises :
-        ValueError : Si l'expression est vide, mal formée ou contient des opérations non numériques.
+        ValueError : Si l'expression est vide, mal formée ou contient des opérandes non numériques.
     '''
 
     if not expr or not isinstance(expr, str):
@@ -72,7 +72,7 @@ def index():
     Une requête GET affiche la page, tandis qu'une requête POST récupère l'expression et la calcule.
 
     Args :
-        Aucun paramètre direct puisque les données sont récupérées depuis la requête FLask.
+        Aucun paramètre direct puisque les données sont récupérées depuis la requête Flask.
     
     Returns : 
         str : Page HTML avec le résultat du calcul ou un message d'erreur.
