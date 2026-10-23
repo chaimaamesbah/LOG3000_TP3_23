@@ -40,7 +40,7 @@ def multiply(a,b):
     Returns :
         float : produit de a et b
     '''
-    return a ** b
+    return a * b
 
 def divide(a,b):
     '''
