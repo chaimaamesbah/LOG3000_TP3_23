@@ -32,7 +32,6 @@ def calculate(expr: str):
     Raises :
         ValueError : Si l'expression est vide, mal formée ou contient des opérandes non numériques.
     '''
-
     if not expr or not isinstance(expr, str):
         raise ValueError("empty expression")
 
@@ -50,7 +49,6 @@ def calculate(expr: str):
             op_char = ch
 
     if op_pos <= 0 or op_pos >= len(s) - 1:
-        # operator at start/end or not found
         raise ValueError("invalid expression format")
 
     left = s[:op_pos]
@@ -76,12 +74,6 @@ def index():
     
     Returns : 
         str : Page HTML avec le résultat du calcul ou un message d'erreur.
-
-
-    
-    
-    
-    
     '''
     result = ""
     if request.method == 'POST':
