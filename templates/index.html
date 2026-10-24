@@ -1,3 +1,8 @@
+<!--
+Ce fichier contient l'interface de la calculatrice. Il envoie les expressions à app.py et
+affiche les résultats. Il utilise style.css pour l'apparence et JavaScript pour les boutons.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +14,9 @@
 <body>
 <div class="calculator">
    <h1>Flask Calculator</h1>
+   <!-- Le formulaire transmet l'expression au serveur Flask. -->
    <form method="POST">
+      <!-- La saisie est contrôlée par les boutons JavaScript. -->
       <input type="text" name="display" id="display" value="{{ result }}" readonly>
 
       <div class="buttons">
@@ -37,11 +44,22 @@
 </div>
 
 <script>
+   /**
+    * Ajoute un chiffre ou un opérateur à l'affichage.
+    *
+    * @param {string} value - Caractère à ajouter.
+    * @returns {void}
+    */
    function appendToDisplay(value) {
       const display = document.getElementById('display');
       display.value += value;
    }
 
+   /**
+    * Efface l'expression affichée pour recommencer un calcul.
+    *
+    * @returns {void}
+    */
    function clearDisplay() {
       document.getElementById('display').value = '';
    }

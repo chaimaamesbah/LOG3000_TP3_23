@@ -1,3 +1,9 @@
+/*
+Ce fichier définit le style de la calculatrice, notamment les couleurs, les 
+dimensions et la disposition des boutons. Il est utilisé par index.html.
+*/
+
+/* Centre la calculatrice dans la fenêtre du navigateur. */
 body {
    font-family: Arial, sans-serif;
    background-color: #f0f0f0;
@@ -37,6 +43,7 @@ h1 {
    color: #fff;
 }
 
+/* Organise les boutons en une grille de quatre colonnes. */
 .buttons {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
@@ -59,6 +66,7 @@ h1 {
    background-color: #555;
 }
 
+/* Distingue visuellement les opérateurs des boutons numériques. */
 .operator {
    background-color: #ff9500;
 }
