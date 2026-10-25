@@ -12,7 +12,7 @@ L'utilisateur saisit une expression à partir des boutons de l'interface. Lorsqu
 
 La calculatrice est conçue pour traiter une seule opération entre deux nombres à la fois. Elle ne prend donc pas en charge les expressions plus complexes contenant plusieurs opérateurs, des parenthèses ou des nombres négatifs.
 
-Notre objectif est de rendre cette application fiable, bien documentée et facile à maintenir. Pour y parvenir, nous allons améliorer la documentation du code, développer des tests automatisés et corriger les bogues identifiés. Nous utiliserons également GitHub pour organiser les modifications et faciliter la collaboration entre les membres de l'équipe.
+Notre objectif est de rendre cette application fiable, bien documentée et facile à maintenir. Pour y parvenir, nous avons amélioré la documentation du code, développé des tests automatisés et corrigé les bogues identifiés. Nous utilisons également GitHub pour organiser les modifications et faciliter la collaboration entre les membres de l'équipe.
 
 ### Structure du projet
 
@@ -22,7 +22,7 @@ Le projet est composé des fichiers et répertoires suivants :
 - **`operators.py`** : regroupe les fonctions responsables des quatre opérations mathématiques.
 - **`templates/`** : contient le fichier HTML qui définit l'interface de la calculatrice et les interactions avec les boutons.
 - **`static/`** : contient le fichier CSS qui gère l'apparence et la disposition des éléments de l'interface.
-- **`tests/`** : regroupera les tests automatisés permettant de vérifier le fonctionnement de l'application.
+- **`tests/`** : regroupe les tests automatisés permettant de vérifier le fonctionnement de l'application.
 
 ## 2. Installation
 
@@ -105,11 +105,11 @@ Pour arrêter le serveur, utiliser la combinaison `Ctrl+C` dans le terminal.
 
 ## 4. Tests
 
-Des tests automatisés seront développés avec **pytest** afin de vérifier le fonctionnement de la calculatrice et d'identifier les bogues présents dans le code.
+Des tests automatisés ont été développés avec **pytest** afin de vérifier le fonctionnement de la calculatrice et d'identifier les bogues présents dans le code.
 
-Ces tests couvriront notamment les quatre opérations mathématiques, la validation des expressions ainsi que les cas particuliers, comme la division par zéro.
+Ces tests couvrent notamment les quatre opérations mathématiques, la validation des expressions ainsi que les cas particuliers, comme la division par zéro.
 
-Les fichiers de test seront regroupés dans le répertoire `tests/`, qui contiendra également une documentation expliquant leur rôle.
+Les fichiers de test sont regroupés dans le répertoire `tests/`, qui contient également une documentation expliquant leur rôle.
 
 ### Exécuter les tests
 
@@ -121,7 +121,7 @@ Les fichiers de test seront regroupés dans le répertoire `tests/`, qui contien
 
 `python -m pytest`
 
-Les tests seront d'abord exécutés sur le code initial afin de repérer les problèmes. Après chaque correction, ils seront relancés pour vérifier que le bogue est résolu. Une exécution complète des tests sera également réalisée après la fusion des modifications.
+Les tests ont d'abord été exécutés sur le code initial afin de repérer les problèmes. Après chaque correction, ils ont été relancés pour vérifier que le bogue était résolu. Une exécution complète des tests a été également réalisée après la fusion des modifications.
 
 ## 5. Flux de contribution
 
@@ -133,7 +133,7 @@ Lorsqu'un bogue est découvert, une Issue GitHub est créée pour documenter le 
 
 ### 5.2. Création des branches
 
-Une branche distincte est créée à partir de `main` pour chaque issue. Les branches sont nommées selon le type de modification, par exemple `fix/nom-du-bogue` pour une correction ou `docs/documentation` pour une amélioration de la documentation.
+Une branche distincte est créée pour chaque issue. Les branches de correction `fix/` ont été créées à partir de `test/operations-et-interface`, qui contenait déjà les tests. Les branches sont nommées selon le type de modification, par exemple `fix/nom-du-bogue` pour une correction ou `docs/documentation` pour une amélioration de la documentation.
 
 ### 5.3. Modifications et tests
 
@@ -141,6 +141,6 @@ Le membre responsable effectue les changements nécessaires sur sa branche et ex
 
 ### 5.4. Pull Requests et fusion
 
-Une fois les modifications terminées, une Pull Request est ouverte vers main en faisant référence à l’issue correspondante. Avant la fusion, on relance le test lié à l’issue pour vérifier que la correction fonctionne.
+Une fois les modifications terminées, une Pull Request est ouverte vers `main` en faisant référence à l’issue correspondante. Avant la fusion, on relance le test lié à l’issue pour vérifier que la correction fonctionne.
 
 Après la fusion, l'ensemble des tests est exécuté à nouveau afin de confirmer le bon fonctionnement de l'application et de s'assurer qu'aucune régression n'a été introduite.
