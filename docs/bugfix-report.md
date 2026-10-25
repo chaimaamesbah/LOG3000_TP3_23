@@ -98,5 +98,4 @@ uniquement le fichier concerné par son issue :
 | `fix/issue-6-bouton-multiplication` | 1 | `templates/index.html` |
 | `fix/issue-7-bouton-division` | 1 | `templates/index.html` |
 
-Aucune branche ne contient le correctif d'une autre issue. Aucune Pull Request n'a été créée,
-aucune branche n'a été fusionnée et aucune issue n'a été fermée dans le cadre de ce travail.
+Aucune branche ne contient le correctif d’une autre issue. Chaque branche a ensuite été intégrée dans main par sa propre Pull Request (#10 à #16), puis les sept issues ont été fermées.
