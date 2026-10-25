@@ -141,6 +141,6 @@ Le membre responsable effectue les changements nécessaires sur sa branche et ex
 
 ### 5.4. Pull Requests et fusion
 
-Une fois les modifications terminées, une Pull Request est ouverte vers `main` en faisant référence à l'issue correspondante. Les changements sont examinés par un autre membre de l'équipe avant leur fusion.
+Une fois les modifications terminées, une Pull Request est ouverte vers main en faisant référence à l’issue correspondante. Avant la fusion, on relance le test lié à l’issue pour vérifier que la correction fonctionne.
 
 Après la fusion, l'ensemble des tests est exécuté à nouveau afin de confirmer le bon fonctionnement de l'application et de s'assurer qu'aucune régression n'a été introduite.
